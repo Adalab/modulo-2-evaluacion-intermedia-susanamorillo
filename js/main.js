@@ -6,7 +6,6 @@ const player = document.querySelector (".js-player");
 const computer = document.querySelector(".js-computer");
 const msj = document.querySelector(".js-msj");
 
-player = 0;
 
 
 
@@ -15,23 +14,22 @@ function getRandomNumber(max){
     return randomNumber;
 }
 
-
-
-
 function play(){
     const valuePlay = select.value;
-    player.innerHTML = select.value;
-    
+   
 }
 
 function randomNumber(){
     const randomNumber = getRandomNumber(10);
     computer.innerHTML = randomNumber;
-  resultPlay();
+    return randomNumber;
+
   
 }
 function resultPlay(){
     const playerNumber = parseInt(player,10);
+    randomNumber();
+
     if(playerNumber === randomNumber){
 
         msj.innerHTML ="Empate";
@@ -44,7 +42,7 @@ function resultPlay(){
     }
 
 
-    
+  
 }
 
 function handleClick (evento){
